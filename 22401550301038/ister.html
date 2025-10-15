@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ISTAR College Page</title>
+</head>
+<link rel="stylesheet" href="../css/ister.css">
+<body>
+  <!-- Top Frame -->
+  <header>
+    <img src="../images/ilogo.png" alt="">
+    <h1>ISTAR College</h1>
+        <a href="home.html" >HOME |</a>
+        <a href="ister.html" style="color: aliceblue; background-color: black; padding: 10px; border-radius: 5px;">ISTAR |</a>
+        <a href="semcom.html" >SEMCOM |</a>
+        <a href="adit.html" >ADIT |</a> 
+        <a href="mbit.html" >MBIT |</a>
+  </header>
+
+  <!-- Left Frame -->
+  <nav>
+    <h3>Departments</h3>
+    <a href="#" onclick="loadPage('cs')">Computer Science</a>
+    <a href="#" onclick="loadPage('maths')">Mathematics</a>
+    <a href="#" onclick="loadPage('physics')">Physics</a>
+  </nav>
+
+  <!-- Right Frame -->
+  <main id="content">
+    <h2>Welcome to ISTAR</h2>
+    <p>Select a department from the left menu to see details.</p>
+  </main>
+
+  <script>
+    function loadPage(page) {
+      let content = document.getElementById("content");
+      if (page === "college") {
+        content.innerHTML = "<h2>College Page</h2><p>ISTAR is a leading institution offering various programs for higher education.</p>";
+      } else if (page === "catalogue") {
+        content.innerHTML = "<h2>Catalogue Page</h2><p>Explore our course catalogue including Computer Science, Mathematics, and Physics programs.</p>";
+      } else if (page === "cs") {
+        content.innerHTML = "<h2>Computer Science Department</h2><p>The CS Department offers UG and PG programs in software development, AI, data science, and more.</p>";
+      } else if (page === "maths") {
+        content.innerHTML = "<h2>Mathematics Department</h2><p>The Mathematics Department focuses on pure and applied mathematics with research opportunities.</p>";
+      } else if (page === "physics") {
+        content.innerHTML = "<h2>Physics Department</h2><p>The Physics Department provides courses in classical mechanics, quantum physics, and material science.</p>";
+      }
+    }
+  </script>
+</body>
+</html>

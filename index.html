@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>University Website</title>
+  <link rel="stylesheet" href="../css/home.css">
+</head>
+<body>
+  <header>
+    <div style="display:flex;align-items:center;">
+      <img src="../images/CVM.jpg" alt="Logo" style="height:60px;">
+      <h2 style="margin-left:250px;">CVM University</h2>
+    </div>
+    <nav>
+      <a href="#" style="color: aliceblue; background-color: black; padding: 10px; border-radius: 5px;">HOME |</a>
+      <a href="/22401550301038/ister.html">ISTAR |</a>
+      <a href="/22401550301038/semcom.html">SEMCOM |</a>
+      <a href="22401550301038/adit.html">ADIT |</a>
+      <a href="22401550301038/mbit.html">MBIT |</a>
+    </nav>
+  </header>
+  <aside>
+    <h3>Quick Links</h3><br>
+    <ul>
+      <li><a href="#" onclick="showContent('science')">Faculty of Science</a></li>
+      <li><a href="#" onclick="showContent('arts')">Faculty of Arts</a></li>
+      <li><a href="#" onclick="showContent('commerce')">Faculty of Commerce</a></li>
+    </ul>
+  </aside>
+  <main id="content">
+    <h1>Welcome to CVM University</h1>
+    <p>
+      Our university is dedicated to academic excellence, research, and innovation.
+      Explore our wide range of courses and vibrant campus life.
+    </p>
+  </main>
+
+  <footer>
+    &copy; 2025 CVM University. All rights reserved.
+  </footer>
+
+  <script>
+    // JavaScript to change main content dynamically
+    function showContent(faculty) {
+      let content = document.getElementById("content");
+
+      if (faculty === "science") {
+        content.innerHTML = `
+          <h2>Faculty of Science</h2>
+          <p>
+            The Faculty of Science offers programs in Physics, Chemistry, Mathematics, and Biology.  
+            Our labs are equipped with modern facilities to encourage research and discovery.
+          </p>`;
+      } 
+      else if (faculty === "arts") {
+        content.innerHTML = `
+          <h2>Faculty of Arts</h2>
+          <p>
+            The Faculty of Arts focuses on Literature, History, Sociology, and Political Science.  
+            We encourage creativity, critical thinking, and cultural studies.
+          </p>`;
+      } 
+      else if (faculty === "commerce") {
+        content.innerHTML = `
+          <h2>Faculty of Commerce</h2>
+          <p>
+            The Faculty of Commerce specializes in Accounting, Business Administration, and Economics.  
+            It prepares students for careers in finance, trade, and entrepreneurship.
+          </p>`;
+      }
+    }
+  </script>
+</body>
+</html>

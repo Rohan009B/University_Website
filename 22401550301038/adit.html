@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADIT College</title>
+  <link rel="stylesheet" href="../css/adit.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="../images/ADIT.png" alt="ADIT Logo">
+    </div>
+    <div class="college-name">ADIT College</div>
+    <nav>
+       <a href="home.html" >HOME |</a>
+        <a href="ister.html" >ISTAR |</a>
+        <a href="semcom.html" >SEMCOM |</a>
+        <a href="adit.html" style="color: aliceblue; background-color: black; padding: 10px; border-radius: 5px;">ADIT |</a> 
+        <a href="mbit.html" >MBIT |</a>
+    </nav>
+  </header>
+
+  <!-- Main layout -->
+  <div class="main">
+    <div class="sidebar">
+      <button onclick="loadPage('cs')">Computer Science</button>
+      <button onclick="loadPage('bba')">BBA</button>
+      <button onclick="loadPage('commerce')">Commerce</button>
+    </div>
+
+    <div class="content" id="content">
+      <h2>Welcome to ADIT College</h2>
+      <p>Select a department from the left to view its details here.</p>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    function loadPage(page) {
+      let content = document.getElementById("content");
+
+      if (page === "college") {
+        content.innerHTML = `
+          <h2>College Page</h2>
+          <p>ADIT is a premier institution offering programs in Commerce, Management, and Computer Applications.</p>
+        `;
+      } 
+      else if (page === "catalogue") {
+        content.innerHTML = `
+          <h2>Book Catalogue</h2>
+          <table>
+            <tr>
+              <th>Book Name</th>
+              <th>Author</th>
+              <th>Department</th>
+              <th>Price</th>
+            </tr>
+            <tr>
+              <td>Introduction to Programming</td>
+              <td>John Doe</td>
+              <td>CS</td>
+              <td>$30</td>
+            </tr>
+            <tr>
+              <td>Business Management</td>
+              <td>Jane Smith</td>
+              <td>BBA</td>
+              <td>$25</td>
+            </tr>
+            <tr>
+              <td>Accounting Principles</td>
+              <td>Robert Brown</td>
+              <td>Commerce</td>
+              <td>$40</td>
+            </tr>
+          </table>
+        `;
+      } 
+      else if (page === "cs") {
+        content.innerHTML = `
+          <h2>Computer Science Department</h2>
+          <p>The CS Department focuses on software development, web technologies, AI, and data science.</p>
+        `;
+      } 
+      else if (page === "bba") {
+        content.innerHTML = `
+          <h2>BBA Department</h2>
+          <p>The BBA Department trains students in business administration, management, and leadership skills.</p>
+        `;
+      } 
+      else if (page === "commerce") {
+        content.innerHTML = `
+          <h2>Commerce Department</h2>
+          <p>The Commerce Department provides in-depth knowledge of accounting, finance, and economics.</p>
+        `;
+      }
+    }
+  </script>
+
+</body>
+</html>

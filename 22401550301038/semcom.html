@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SEMCOM College Page</title>
+    <link rel="stylesheet" href="../css/semcom.css">
+</head>
+<body>
+
+  <!-- Top Frame -->
+  <header>
+    <img src="../images/Semcom.jpg" style="height: 90px; width: auto;" alt="SEMCOM LOGO">
+    <h1>SEMCOM College</h1>
+    <nav>
+      <a href="home.html" >HOME |</a>
+      <a href="ister.html" >ISTER |</a>
+      <a href="semcom.html" style="color: aliceblue; background-color: black; padding: 10px; border-radius: 5px;">SEMCOM |</a>
+      <a href="adit.html" >ADIT |</a>
+      <a href="mbit.html" >MBIT |</a>
+    </nav>
+  </header>
+
+  <!-- Left Frame -->
+  <aside>
+    <h3>Departments</h3>
+    <a href="#" onclick="loadPage('cs')">Computer Science</a>
+    <a href="#" onclick="loadPage('bba')">BBA</a>
+    <a href="#" onclick="loadPage('commerce')">Commerce</a>
+  </aside>
+
+  <!-- Right Frame -->
+  <main id="content">
+    <h2>Welcome to SEMCOM</h2>
+    <p>Select a department from the left menu to see details.</p>
+  </main>
+
+  <script>
+    function loadPage(page) {
+      let content = document.getElementById("content");
+      if (page === "college") {
+        content.innerHTML = "<h2>College Page</h2><p>SEMCOM is a premier institution offering programs in Commerce, Management, and Computer Applications.</p>";
+      } else if (page === "catalogue") {
+        content.innerHTML = "<h2>Catalogue Page</h2><p>Explore our course catalogue including BBA, Commerce, and Computer Science programs.</p>";
+      } else if (page === "cs") {
+        content.innerHTML = "<h2>Computer Science Department</h2><p>The CS Department focuses on software development, web technologies, AI, and data science.</p>";
+      } else if (page === "bba") {
+        content.innerHTML = "<h2>BBA Department</h2><p>The BBA Department trains students in business administration, management, and leadership skills.</p>";
+      } else if (page === "commerce") {
+        content.innerHTML = "<h2>Commerce Department</h2><p>The Commerce Department provides in-depth knowledge of accounting, finance, and economics.</p>";
+      }
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      display: grid;
+      grid-template-rows: 80px 1fr;
+      grid-template-columns: 200px 1fr;
+      grid-template-areas:
+        "header header"
+        "sidebar main";
+      min-height: 100vh;
+    }
+
+    /* Top Frame - Header */
+    header {
+      grid-area: header;
+      background-color: #004080;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+    }
+
+    /* Left - Logo */
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 60px;
+      margin-right: 10px;
+    }
+
+    /* Center - College Name */
+    .college-name {
+      flex: 1;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    /* Right - Navigation */
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 15px;
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 4px;
+    }
+
+    nav a:hover {
+      background-color: #00264d;
+    }
+
+    /* Left Frame (Sidebar) */
+    aside {
+      grid-area: sidebar;
+      background-color: #f4f4f4;
+      padding: 20px;
+      border-right: 1px solid #ddd;
+    }
+
+    aside h2 {
+      margin-bottom: 15px;
+      color: #004080;
+    }
+
+    aside ul {
+      list-style-type: none;
+    }
+
+    aside ul li {
+      margin-bottom: 10px;
+    }
+
+    aside ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    aside ul li a:hover {
+      color: #004080;
+    }
+
+    /* Right Frame (Main Content) */
+    main {
+      grid-area: main;
+      padding: 20px;
+    }
+
+    main h2 {
+      color: #004080;
+      margin-bottom: 15px;
+    }
+
+    main p {
+      line-height: 1.6;
+      font-size: 16px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      body {
+        grid-template-rows: 100px auto auto;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "header"
+          "sidebar"
+          "main";
+      }
+
+      aside {
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        text-align: center;
+      }
+
+      .college-name {
+        order: 2;
+      }
+
+      nav {
+        order: 3;
+      }
+    }
